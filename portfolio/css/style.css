@@ -430,14 +430,70 @@ section {
 .skill-card ul li {
     margin-bottom: 0.8rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.4rem;
     font-size: 0.95rem;
 }
 
-.skill-card ul li span {
+.skill-card ul li span:first-child {
+    font-weight: 500;
+    color: var(--text-main);
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-card ul li span:last-child {
     color: var(--text-sub);
     font-size: 0.85rem;
     font-style: italic;
+}
+
+/* Skill Progress Bars */
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skill-list > li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0;
+}
+
+.skill-name {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-name::after {
+    content: attr(data-progress);
+    font-weight: 600;
+    color: var(--text-sub);
+    font-size: 0.85rem;
+}
+
+.skill-bar {
+    height: 8px;
+    background: var(--stat-bg);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary) 0%, #3b82f6 100%);
+    border-radius: 4px;
+    width: 0;
+    transition: width 1s ease-out;
+}
+
+.skill-card:hover .skill-progress {
+    width: var(--progress);
 }
 
 .professional-skills {
