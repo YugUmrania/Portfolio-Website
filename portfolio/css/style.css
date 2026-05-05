@@ -161,17 +161,21 @@ section {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    gap: 2rem;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary);
+    flex-shrink: 0;
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .nav-links a {
@@ -183,7 +187,6 @@ section {
     color: var(--primary);
 }
 
-/* Theme Toggle */
 .theme-toggle {
     background: var(--white);
     border: 1px solid var(--border-color);
@@ -197,6 +200,7 @@ section {
     font-size: 1.1rem;
     color: var(--text-main);
     transition: var(--transition);
+    flex-shrink: 0;
     margin-left: 1rem;
 }
 
@@ -204,11 +208,6 @@ section {
     background: var(--primary);
     color: var(--white);
     border-color: var(--primary);
-}
-
-.nav-container .theme-toggle {
-    margin-left: auto;
-    margin-right: 1rem;
 }
 
 /* Hero Section */
@@ -1008,7 +1007,7 @@ section {
         transition: var(--transition);
     }
 
-    .nav-links.active {
+.nav-links.active {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -1019,6 +1018,17 @@ section {
         padding: 1rem;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         z-index: 1000;
+        gap: 1rem;
+    }
+
+    .nav-container {
+        gap: 0.5rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        margin-left: auto;
     }
 
     .menu-toggle.is-active .bar:nth-child(1) {
