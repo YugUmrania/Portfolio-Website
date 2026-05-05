@@ -2,17 +2,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.getElementById('navbar');
     const mobileMenu = document.getElementById('mobile-menu');
     const navLinks = document.querySelector('.nav-links');
-    
+
     let lastScrollY = window.scrollY;
     let hideTimeout;
 
     // 1. Smart Navbar - Hide on scroll down, Show on scroll up (Samsung style)
     window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
-        
+
         // Clear any existing timeout
         clearTimeout(hideTimeout);
-        
+
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
             // Scrolling DOWN - hide navbar with transition
             navbar.style.transform = 'translateY(-100%)';
@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.style.transform = 'translateY(0)';
             navbar.style.opacity = '1';
         }
-        
+
         lastScrollY = currentScrollY;
-        
+
         // Add scrolled class for shadow effect when visible
         if (currentScrollY > 50) {
             navbar.classList.add('scrolled');
@@ -32,6 +32,21 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('scrolled');
         }
     });
+
+    const sections = document.querySelectorAll('section[id]');
+    const navAnchors = document.querySelectorAll('.nav-links a');
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navAnchors.forEach(a => a.classList.remove('active'));
+                const active = document.querySelector(
+                    `.nav-links a[href="#${entry.target.id}"]`
+                );
+                if (active) active.classList.add('active');
+            }
+        });
+    }, { threshold: 0.4 });
+    sections.forEach(s => sectionObserver.observe(s));
 
     // Also show navbar when page loads (initial state)
     navbar.style.transform = 'translateY(0)';
@@ -113,33 +128,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 6. Contact Form Handling - Store details & show thank you
+    // 6. Contact Form Handling - Netlify Forms (no JS needed, handled by Netlify)
     const contactForm = document.getElementById('contactForm');
     const thankYouMessage = document.getElementById('thankYouMessage');
     const thankYouName = document.getElementById('thankYouName');
 
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
-
-            const contactData = {
-                name: name,
-                email: email,
-                message: message,
-                timestamp: new Date().toISOString()
-            };
-
-            let contacts = JSON.parse(localStorage.getItem('portfolio_contacts')) || [];
-            contacts.push(contactData);
-            localStorage.setItem('portfolio_contacts', JSON.stringify(contacts));
-
-            thankYouName.textContent = name;
-            contactForm.style.display = 'none';
-            thankYouMessage.style.display = 'block';
+            // Netlify will handle the form submission
+            // Just show thank you message after brief delay
+            setTimeout(() => {
+                const name = document.getElementById('name').value.trim();
+                thankYouName.textContent = name;
+                contactForm.style.display = 'none';
+                thankYouMessage.style.display = 'block';
+            }, 100);
         });
     }
 });
