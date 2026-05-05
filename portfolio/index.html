@@ -5,6 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yug Umrania | Aspiring AI/ML Engineer</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Yug Umrania - CSE Student at DEPSTAR (CHARUSAT), Aspiring AI/ML Engineer, Data Science Enthusiast. View projects, skills, and certificates.">
+    <meta name="keywords" content="Yug Umrania, AI/ML, Data Science, Machine Learning, Portfolio, CSE, CHARUSAT, Developer">
+    <meta name="author" content="Yug Umrania">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yugumrania.netlify.app/">
+    <meta property="og:title" content="Yug Umrania | Aspiring AI/ML Engineer">
+    <meta property="og:description" content="CSE Student at DEPSTAR (CHARUSAT), Aspiring AI/ML Engineer, Data Science Enthusiast. View projects, skills, and certificates.">
+    <meta property="og:image" content="https://yugumrania.netlify.app/assets/images/profile.jpeg.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yugumrania.netlify.app/">
+    <meta property="twitter:title" content="Yug Umrania | Aspiring AI/ML Engineer">
+    <meta property="twitter:description" content="CSE Student at DEPSTAR (CHARUSAT), Aspiring AI/ML Engineer, Data Science Enthusiast.">
+    <meta property="twitter:image" content="https://yugumrania.netlify.app/assets/images/profile.jpeg.webp">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yugumrania.netlify.app/">
     <link rel="icon" type="image/svg+xml" href="yu-favicon.svg">
     <link rel="apple-touch-icon" href="yu-favicon.svg">
     <!-- Google Fonts -->
@@ -63,6 +86,9 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </nav>
 
@@ -159,6 +185,7 @@
                     <h3><i class="fas fa-code"></i> Programming</h3>
                     <ul>
                         <li>Python <span>Intermediate</span></li>
+                        <li>SQL <span>Intermediate</span></li>
                         <li>C/C++ <span>Intermediate</span></li>
                         <li>Java <span>Beginner</span></li>
                         <li>JavaScript <span>Beginner</span></li>
@@ -173,6 +200,7 @@
                         <li>HTML5</li>
                         <li>CSS3</li>
                         <li>Responsive Design</li>
+                        <li>React.js <span>Beginner</span></li>
                     </ul>
                 </div>
 
@@ -183,6 +211,7 @@
                         <li>Data Science Lifecycle</li>
                         <li>Data Cleaning & Preprocessing</li>
                         <li>Exploratory Data Analysis (EDA)</li>
+                        <li>Feature Engineering & Selection</li>
                         <li>Basic Machine Learning Concepts</li>
                     </ul>
                 </div>
@@ -223,13 +252,14 @@
                     </div>
                     <div class="project-info">
                         <h3>Personal Portfolio Website</h3>
-                        <p>A responsive personal portfolio showcasing my skills, projects, and certificates. Currently, you are viewing the live production of it.</p>
+                        <p>A responsive personal portfolio showcasing my skills, projects, and certificates. Currently,
+                            you are viewing the live production of it.</p>
                         <div class="tech-stack">
                             <span>HTML</span><span>CSS</span><span>JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/YugUmrania/portfolio"
-                                class="btn-small"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/YugUmrania/portfolio" class="btn-small"><i
+                                    class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -286,115 +316,143 @@
             <div class="cert-grid">
                 <!-- Coursera Certificates -->
                 <div class="cert-card" data-category="coursera">
-                    <img src="assets/images/certificates/Coursera/C_for_Everyone.png.webp" loading="lazy" alt="C for Everyone" onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Coursera/C_for_Everyone.png.webp" loading="lazy"
+                        alt="C for Everyone" onclick="openLightbox(this)">
+                    <div class="cert-name">C for Everyone</div>
                 </div>
                 <div class="cert-card" data-category="coursera">
                     <img src="assets/images/certificates/Coursera/Core Java.png.webp" loading="lazy" alt="Core Java"
                         onclick="openLightbox(this)">
+                    <div class="cert-name">Core Java</div>
                 </div>
                 <div class="cert-card" data-category="coursera">
-                    <img src="assets/images/certificates/Coursera/DS_orientation.png.webp" loading="lazy" alt="DS Orientation"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Coursera/DS_orientation.png.webp" loading="lazy"
+                        alt="DS Orientation" onclick="openLightbox(this)">
+                    <div class="cert-name">Data Science Orientation</div>
                 </div>
                 <div class="cert-card" data-category="coursera">
                     <img src="assets/images/certificates/Coursera/DSA_packt.png.webp" loading="lazy" alt="DSA Packt"
                         onclick="openLightbox(this)">
+                    <div class="cert-name">DSA with Python</div>
                 </div>
                 <div class="cert-card" data-category="coursera">
-                    <img src="assets/images/certificates/Coursera/funda_dsa.png.webp" loading="lazy" alt="Fundamentals of DSA"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Coursera/funda_dsa.png.webp" loading="lazy"
+                        alt="Fundamentals of DSA" onclick="openLightbox(this)">
+                    <div class="cert-name">Fundamentals of DSA</div>
                 </div>
                 <div class="cert-card" data-category="coursera">
-                    <img src="assets/images/certificates/Coursera/Google_get_started_python.png.webp" loading="lazy" alt="Google Python"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Coursera/Google_get_started_python.png.webp" loading="lazy"
+                        alt="Google Python" onclick="openLightbox(this)">
+                    <div class="cert-name">Google Python Crash Course</div>
                 </div>
                 <div class="cert-card" data-category="coursera">
-                    <img src="assets/images/certificates/Coursera/IBM_data_analysis_py.png.webp" loading="lazy" alt="IBM Data Analysis"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Coursera/IBM_data_analysis_py.png.webp" loading="lazy"
+                        alt="IBM Data Analysis" onclick="openLightbox(this)">
+                    <div class="cert-name">IBM Data Analysis with Python</div>
                 </div>
                 <div class="cert-card" data-category="coursera">
-                    <img src="assets/images/certificates/Coursera/IBM_data_visual_py.png.webp" loading="lazy" alt="IBM Data Visualization"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Coursera/IBM_data_visual_py.png.webp" loading="lazy"
+                        alt="IBM Data Visualization" onclick="openLightbox(this)">
+                    <div class="cert-name">Data Visualization with Python</div>
                 </div>
                 <div class="cert-card" data-category="coursera">
-                    <img src="assets/images/certificates/Coursera/IBM_dataScience.png.webp" loading="lazy" alt="IBM Data Science"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Coursera/IBM_dataScience.png.webp" loading="lazy"
+                        alt="IBM Data Science" onclick="openLightbox(this)">
+                    <div class="cert-name">IBM Data Science Professional</div>
                 </div>
                 <div class="cert-card" data-category="coursera">
-                    <img src="assets/images/certificates/Coursera/IBM_ds_methodolgy.png.webp" loading="lazy" alt="IBM DS Methodology"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Coursera/IBM_ds_methodolgy.png.webp" loading="lazy"
+                        alt="IBM DS Methodology" onclick="openLightbox(this)">
+                    <div class="cert-name">Data Science Methodology</div>
                 </div>
                 <div class="cert-card" data-category="coursera">
-                    <img src="assets/images/certificates/Coursera/IBM_ML_with_py.png.webp" loading="lazy" alt="IBM ML with Python"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Coursera/IBM_ML_with_py.png.webp" loading="lazy"
+                        alt="IBM ML with Python" onclick="openLightbox(this)">
+                    <div class="cert-name">Machine Learning with Python</div>
                 </div>
                 <div class="cert-card" data-category="coursera">
-                    <img src="assets/images/certificates/Coursera/IBM_py_ai_ds_develop.png.webp" loading="lazy" alt="IBM AI DS Developer"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Coursera/IBM_py_ai_ds_develop.png.webp" loading="lazy"
+                        alt="IBM AI DS Developer" onclick="openLightbox(this)">
+                    <div class="cert-name">Python AI DS Developer</div>
                 </div>
                 <div class="cert-card" data-category="coursera">
-                    <img src="assets/images/certificates/Coursera/IBM_py_projectds.png.webp" loading="lazy" alt="IBM Project DS"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Coursera/IBM_py_projectds.png.webp" loading="lazy"
+                        alt="IBM Project DS" onclick="openLightbox(this)">
+                    <div class="cert-name">Python for Data Science Project</div>
                 </div>
                 <div class="cert-card" data-category="coursera">
-                    <img src="assets/images/certificates/Coursera/IBM_tools_for_ds.png.webp" loading="lazy" alt="IBM Tools for DS"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Coursera/IBM_tools_for_ds.png.webp" loading="lazy"
+                        alt="IBM Tools for DS" onclick="openLightbox(this)">
+                    <div class="cert-name">Tools for Data Science</div>
                 </div>
                 <div class="cert-card" data-category="coursera">
                     <img src="assets/images/certificates/Coursera/SE.png.webp" loading="lazy" alt="Software Engineering"
                         onclick="openLightbox(this)">
+                    <div class="cert-name">Software Engineering</div>
                 </div>
                 <div class="cert-card" data-category="coursera">
-                    <img src="assets/images/certificates/Coursera/Webapp_built_PHP.png.webp" loading="lazy" alt="Web App with PHP"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Coursera/Webapp_built_PHP.png.webp" loading="lazy"
+                        alt="Web App with PHP" onclick="openLightbox(this)">
+                    <div class="cert-name">Web App with PHP</div>
                 </div>
 
                 <!-- Events Certificates -->
                 <div class="cert-card" data-category="events">
                     <img src="assets/images/certificates/Events/AI-Workshop.png.webp" loading="lazy" alt="AI Workshop"
                         onclick="openLightbox(this)">
+                    <div class="cert-name">AI Workshop</div>
                 </div>
                 <div class="cert-card" data-category="events">
-                    <img src="assets/images/certificates/Events/Beam_Bender_NonTech.png.webp" loading="lazy" alt="Beam Bender NonTech"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Events/Beam_Bender_NonTech.png.webp" loading="lazy"
+                        alt="Beam Bender NonTech" onclick="openLightbox(this)">
+                    <div class="cert-name">Beam Bender Non-Tech</div>
                 </div>
                 <div class="cert-card" data-category="events">
                     <img src="assets/images/certificates/Events/Code_Quest.png.webp" loading="lazy" alt="Code Quest"
                         onclick="openLightbox(this)">
+                    <div class="cert-name">Code Quest</div>
                 </div>
                 <div class="cert-card" data-category="events">
-                    <img src="assets/images/certificates/Events/Quantum_Computing.png.webp" loading="lazy" alt="Quantum Computing"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Events/Quantum_Computing.png.webp" loading="lazy"
+                        alt="Quantum Computing" onclick="openLightbox(this)">
+                    <div class="cert-name">Quantum Computing</div>
                 </div>
 
                 <!-- Others Certificates -->
                 <div class="cert-card" data-category="others">
-                    <img src="assets/images/certificates/Others Certificate/AVLON_Cullinary_art.png.webp" loading="lazy" alt="Culinary Art"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Others Certificate/AVLON_Cullinary_art.png.webp" loading="lazy"
+                        alt="Culinary Art" onclick="openLightbox(this)">
+                    <div class="cert-name">Culinary Arts</div>
                 </div>
                 <div class="cert-card" data-category="others">
-                    <img src="assets/images/certificates/Others Certificate/Bug_arena.png.webp" loading="lazy" alt="Bug Arena"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Others Certificate/Bug_arena.png.webp" loading="lazy"
+                        alt="Bug Arena" onclick="openLightbox(this)">
+                    <div class="cert-name">Bug Arena</div>
                 </div>
                 <div class="cert-card" data-category="others">
-                    <img src="assets/images/certificates/Others Certificate/Edunet_Foundation_Greenskills_AI.png.webp" loading="lazy"
-                        alt="Edunet AI" onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Others Certificate/Edunet_Foundation_Greenskills_AI.png.webp"
+                        loading="lazy" alt="Edunet AI" onclick="openLightbox(this)">
+                    <div class="cert-name">Edunet AI Foundation</div>
                 </div>
                 <div class="cert-card" data-category="others">
-                    <img src="assets/images/certificates/Others Certificate/LINGAYS_Banking_Finance.png.webp" loading="lazy"
-                        alt="Banking & Finance" onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Others Certificate/LINGAYS_Banking_Finance.png.webp"
+                        loading="lazy" alt="Banking & Finance" onclick="openLightbox(this)">
+                    <div class="cert-name">Banking & Finance</div>
                 </div>
                 <div class="cert-card" data-category="others">
-                    <img src="assets/images/certificates/Others Certificate/SQL_Island.png.webp" loading="lazy" alt="SQL Island"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Others Certificate/SQL_Island.png.webp" loading="lazy"
+                        alt="SQL Island" onclick="openLightbox(this)">
+                    <div class="cert-name">SQL Island</div>
                 </div>
                 <div class="cert-card" data-category="others">
-                    <img src="assets/images/certificates/Others Certificate/Tata_Crucible.png.webp" loading="lazy" alt="Tata Crucible"
-                        onclick="openLightbox(this)">
+                    <img src="assets/images/certificates/Others Certificate/Tata_Crucible.png.webp" loading="lazy"
+                        alt="Tata Crucible" onclick="openLightbox(this)">
+                    <div class="cert-name">Tata Crucible</div>
                 </div>
                 <div class="cert-card" data-category="others">
                     <img src="assets/images/certificates/Others Certificate/Unstop_management.png.webp" loading="lazy"
                         alt="Unstop Management" onclick="openLightbox(this)">
+                    <div class="cert-name">Unstop Management</div>
                 </div>
             </div>
             <!-- <div class="cert-link-container">
@@ -412,7 +470,7 @@
     <section id="education" class="education section-alt">
         <div class="container">
             <h2 class="section-title">Education Journey</h2>
-            
+
             <div class="education-horizontal">
                 <!-- School -->
                 <div class="edu-card-full">
@@ -511,7 +569,8 @@
                         <h3>Thank You!</h3>
                         <p>Thanks for connecting with me, <span id="thankYouName"></span>!</p>
                         <p>I've received your message and will get back to you soon.</p>
-                        <button type="button" class="btn btn-secondary" onclick="resetForm()">Send Another Message</button>
+                        <button type="button" class="btn btn-secondary" onclick="resetForm()">Send Another
+                            Message</button>
                     </div>
                 </div>
 
@@ -521,7 +580,8 @@
                         <button class="btn btn-secondary" onclick="closeAdmin()">Close</button>
                     </div>
                     <div class="admin-content" id="adminContent"></div>
-                    <button class="btn btn-primary" onclick="clearContacts()" style="margin-top: 1rem;">Clear All Contacts</button>
+                    <button class="btn btn-primary" onclick="clearContacts()" style="margin-top: 1rem;">Clear All
+                        Contacts</button>
                 </div>
             </div>
         </div>
@@ -533,6 +593,11 @@
             <p>Designed & Built by Yug Umrania &copy; 2026</p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="js/script.js"></script>
     <script>
@@ -589,6 +654,50 @@
         }
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or system preference
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            html.setAttribute('data-theme', 'dark');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            if (newTheme === 'dark') {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
