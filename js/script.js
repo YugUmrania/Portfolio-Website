@@ -135,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
             // Netlify will handle the form submission
             // Just show thank you message after brief delay
             setTimeout(() => {
