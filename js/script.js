@@ -136,14 +136,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            // Netlify will handle the form submission
-            // Just show thank you message after brief delay
-            setTimeout(() => {
+            const formData = new FormData(contactForm);
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            }).then(() => {
                 const name = document.getElementById('name').value.trim();
                 thankYouName.textContent = name;
                 contactForm.style.display = 'none';
                 thankYouMessage.style.display = 'block';
-            }, 100);
+            }).catch((error) => {
+                console.error('Error:', error);
+            });
         });
     }
 });
