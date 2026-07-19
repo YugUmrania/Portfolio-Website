@@ -139,8 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(contactForm);
             fetch('/', {
                 method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/x-www-form-urlencoded' }
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
             }).then(() => {
                 const name = document.getElementById('name').value.trim();
                 thankYouName.textContent = name;
@@ -151,6 +151,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+});
+
+// 7. Live Demo Modal
+function showLiveDemoModal() {
+    document.getElementById('liveDemoModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLiveDemoModal() {
+    document.getElementById('liveDemoModal').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLiveDemoModal();
 });
 
 // Reset form to send another message

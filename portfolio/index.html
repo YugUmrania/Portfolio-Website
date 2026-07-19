@@ -334,8 +334,10 @@
                             <span>HTML</span><span>CSS</span><span>JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/YugUmrania/portfolio" class="btn-small"><i
+                            <a href="https://github.com/YugUmrania/Portfolio-Website" class="btn-small"><i
                                     class="fab fa-github"></i> GitHub</a>
+                            <a href="javascript:void(0)" onclick="showLiveDemoModal()"
+                                class="btn-small"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -354,6 +356,8 @@
                         <div class="project-links">
                             <a href="https://github.com/YugUmrania/Used-Car-Price-Prediction-and-Insights-System"
                                 class="btn-small"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://cardealdekho.vercel.app/"
+                                class="btn-small"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -797,6 +801,19 @@
             skillObserver.observe(card);
         });
     </script>
+
+    <!-- Live Demo Modal -->
+    <div id="liveDemoModal" class="modal-overlay" onclick="closeLiveDemoModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeLiveDemoModal()">&times;</button>
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Live Production</h3>
+            <p>You are currently accessing the Live Production of the project. Thank you for your visit.</p>
+            <button class="modal-btn" onclick="closeLiveDemoModal()">Got it!</button>
+        </div>
+    </div>
 </body>
 
 </html>
